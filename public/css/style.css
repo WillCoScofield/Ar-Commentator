@@ -1,0 +1,45 @@
+#nprLogo{
+    width: 100%;
+    padding-top: 10%;
+    
+}
+
+#navNprLogo{
+    width: 25%;
+}
+
+
+
+body{
+    background-image: url("../images/crumPaper.jpg")
+}
+
+.articleHeader{
+    background-color: white;
+    padding-top: 2%;
+    text-align: center;
+    padding-top: .5%;
+    
+}
+
+.article{
+    background: white;
+    padding-top: 2%;
+    padding-bottom: 0%;
+
+}
+/* .container{
+    border: black 1px solid;
+} */
+
+.articleImg{
+    width: 100%;
+}
+
+/* .col{
+    border: black 1px solid;
+} */
+
+.contentHead{
+    
+}
