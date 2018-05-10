@@ -1,15 +1,15 @@
-var mongoose = require ("mongoose");
+var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema({
 
-    title:{
+    title: {
         type: String,
         required: false
 
     },
-    summ:{
+    summ: {
         type: String,
         required: false
 
@@ -23,9 +23,13 @@ var ArticleSchema = new Schema({
         type: String,
         required: false
     },
-    comment:{
+    comment: {
         type: Schema.Types.ObjectId,
         ref: "Comment"
+    },
+    saved: {
+        type: Boolean,
+        default: false
     }
 });
 

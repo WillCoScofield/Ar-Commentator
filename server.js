@@ -42,10 +42,8 @@ app.get("/api/scrape", function (req, res) {
         $("article.item").each(function (i, element) {
             var data = {};
 
-            data.imageUrl = $(this).find("img").attr("src");
-
+            data.imageURL= $(this).find("img").attr("src");
             data.title = $(this).find("h2.title").text();
-
             data.summ = $(this).find("p.teaser").text();
             data.url = $(this).find("a").attr("href");
 

@@ -14,153 +14,199 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.min.css" </head>
 
-<body>
+    <body>
 
-    <!-- Materialize Nav Bar with "NPR Scrapper" top left, Home / Saved / New NPR Scrape / Choose New Site to Scrape (button)?-->
+        <!-- Materialize Nav Bar with "NPR Scrapper" top left, Home / Saved / New NPR Scrape / Choose New Site to Scrape (button)?-->
 
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">
-                <span>
-                    <i class="large material-icons">all_inclusive</i>
-                </span>
-            </a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li>
-                    <a href="sass.html">Home</a>
-                </li>
-                <li>
-                    <a href="badges.html">Saved Articles</a>
-                </li>
-                <li>
-                    <a href="collapsible.html">Scrape New Site?</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-    <!-- Npr logo div col 5 with offsets -->
-    <div class="container">
-        <div class="row">
-            <div class="col s4 offset-s4">
-                <img src="./images/nprLogo.png" alt="nprLogo" id="nprLogo">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo center scrape-new">
+                    <span>
+                        Scrape
+                        <i class="large material-icons">all_inclusive</i>
+                    </span>
+                </a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/api/saved">Saved Articles</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </div>
+        </nav>
 
-
-
-    <!-- Dummy Article  -->
-    <div class="container articleHeader">
-        <div class="row">
-            <h2> NPR's Innovation Tech Articles
-            </h2>
-
-        </div>
-    </div>
-
-
-    <div class="container article">
-        <div class="row">
-            <div class="col s12">
-                <div class="row">
-                    <div class="col s3 offset-s3">
-                        <img class="articleImg" src="./images/dummy.png" alt="">
-                    </div>
-
-                    <div class="col s3 push-s3">
-                        <a class="waves-effect waves-light btn">
-                            <i class="material-icons right">save</i>Save Article</a>
-                    </div>
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <h5>Article Title: Dummy Title</h5>
-                            <hr>
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <h5>Summary:</h5>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, accusantium sed. Consequatur
-                                exercitationem sit quos, doloribus optio quibusdam debitis dolorem expedita assumenda, laudantium,
-                                voluptates voluptatem dolore officiis iste blanditiis recusandae!</p>
-                            <p>Molestiae sit velit neque natus, perspiciatis facere veniam minus impedit, dolorem odit praesentium
-                                commodi ut, vel quia. Illum laboriosam, vel debitis velit labore cumque ut illo enim culpa
-                                maiores delectus.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s2 offset-s5">
-                            Date:
-                        </div>
-                    </div>
+        <!-- Npr logo div col 5 with offsets -->
+        <div class="container">
+            <div class="row">
+                <div class="col s4 offset-s4">
+                    <img src="./images/nprLogo.png" alt="nprLogo" id="nprLogo">
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Comments Space? -->
 
 
-    <div class="container article">
-        <div class="row">
-            <div class="col s12">
-                <div class="row">
-                    <div class="col s3 offset-s3">
-                        <img class="articleImg" src="./images/dummy.png" alt="">
-                    </div>
 
-                    <div class="col s3 push-s3">
-                        <a class="waves-effect waves-light btn">
-                            <i class="material-icons right">save</i>Save Article</a>
-                    </div>
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <h5>Article Title: Dummy Title</h5>
-                            <hr>
+        <!-- Dummy Article  -->
+        <div class="container articleHeader">
+            <div class="row">
+                <h2> NPR's Innovation Tech Articles
+                </h2>
 
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <h5>Summary:</h5>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, accusantium sed. Consequatur
-                                exercitationem sit quos, doloribus optio quibusdam debitis dolorem expedita assumenda, laudantium,
-                                voluptates voluptatem dolore officiis iste blanditiis recusandae!</p>
-                            <p>Molestiae sit velit neque natus, perspiciatis facere veniam minus impedit, dolorem odit praesentium
-                                commodi ut, vel quia. Illum laboriosam, vel debitis velit labore cumque ut illo enim culpa
-                                maiores delectus.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s2 offset-s5">
-                            Date:
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
+
+
+        <div class="container article">
+            <div class="row">
+                <div class="col s12">
 
 
 
-    <!-- Container > (list?) -->
+                    <!-- Container > (list?) -->
+
+                    <script>
+                        $(document).ready(function () {
+                            // Setting a reference to the article-container div where all the dynamic content will go
+                            // Adding event listeners to any dynamically generated "save article"
+                            // and "scrape new article" buttons
+                            var articleContainer = $(".article");
+                            $(document).on("click", ".btn.save", handleArticleSave);
+                            $(document).on("click", ".scrape-new", handleArticleScrape);
+
+                            // Once the page is ready, run the initPage function to kick things off
+                            initPage();
+
+                            function initPage() {
+                                // Empty the article container, run an AJAX request for any unsaved headlines
+                                articleContainer.empty();
+                                $.get("/api/articles?saved=false").then(function (data) {
+                                    // If we have headlines, render them to the page
+                                    if (data && data.length) {
+                                        renderArticles(data);
+                                    }
+                                    else {
+                                        // Otherwise render a message explaing we have no articles
+                                        renderEmpty();
+                                    }
+                                });
+                            }
+
+                            function renderArticles(articles) {
+                                // This function handles appending HTML containing our article data to the page
+                                // We are passed an array of JSON containing all available articles in our database
+                                var articlePanels = [];
+                                // We pass each article JSON object to the createPanel function which returns a bootstrap
+                                // panel with our article data inside
+                                for (var i = 0; i < articles.length; i++) {
+                                    articlePanels.push(createPanel(articles[i]));
+                                }
+                                // Once we have all of the HTML for the articles stored in our articlePanels array,
+                                // append them to the articlePanels container
+                                articleContainer.append(articlePanels);
+                            }
+
+                            function createPanel(article) {
+                                // This functiont takes in a single JSON object for an article/headline
+                                // It constructs a jQuery element containing all of the formatted HTML for the
+                                // article panel
+                                var panel = $(
+                                    [
+                                        "<div class='panel panel-default'>",
+                                        "<div class='panel-heading'>",
+                                        "<img class='articleImg' src='" + article.imageURL + "'>",
+                                        "<h3>",
+                                        "<a class='article-link' target='_blank' href='" + article.url + "'>",
+                                        article.title,
+                                        "</a>",
+                                        "<a class='btn btn-success save'>",
+                                        "Save Article",
+                                        "</a>",
+                                        "</h3>",
+                                        "</div>",
+                                        "<div class='panel-body'>",
+                                        article.summ,
+                                        "</div>",
+                                        "</div>",
+                                        "</div>"
+                                    ].join("")
+                                );
+                                // We attach the article's id to the jQuery element
+                                // We will use this when trying to figure out which article the user wants to save
+                                panel.data("_id", article._id);
+                                // We return the constructed panel jQuery element
+                                return panel;
+                            }
+
+                            function renderEmpty() {
+                                // This function renders some HTML to the page explaining we don't have any articles to view
+                                // Using a joined array of HTML string data because it's easier to read/change than a concatenated string
+                                var emptyAlert = $(
+                                    [
+                                        "<div class='alert alert-warning text-center'>",
+                                        "<h4>Uh Oh. Looks like we don't have any new articles.</h4>",
+                                        "</div>",
+                                        "<div class='panel panel-default'>",
+                                        "<div class='panel-heading text-center'>",
+                                        "<h3>What Would You Like To Do?</h3>",
+                                        "</div>",
+                                        "<div class='panel-body text-center'>",
+                                        "<h4><a class='scrape-new'>Try Scraping New Articles</a></h4>",
+                                        "<h4><a href='/saved'>Go to Saved Articles</a></h4>",
+                                        "</div>",
+                                        "</div>"
+                                    ].join("")
+                                );
+                                // Appending this data to the page
+                                articleContainer.append(emptyAlert);
+                            }
+
+
+                            function handleArticleSave() {
+                                // This function is triggered when the user wants to save an article
+                                // When we rendered the article initially, we attatched a javascript object containing the headline id
+                                // to the element using the .data method. Here we retrieve that.
+                                var articleToSave = $(this).parents(".panel").data();
+                                articleToSave.saved = true;
+                                // Using a patch method to be semantic since this is an update to an existing record in our collection
+                                $.ajax({
+                                    method: "PUT",
+                                    url: "/api/saved",
+                                    data: articleToSave
+                                }).then(function (data) {
+                                    // If successful, mongoose will send back an object containing a key of "ok" with the value of 1
+                                    // (which casts to 'true')
+                                    if (data.ok) {
+                                        // Run the initPage function again. This will reload the entire list of articles
+                                        initPage();
+                                    }
+                                });
+                            }
+
+                            function handleArticleScrape() {
+                                // This function handles the user clicking any "scrape new article" buttons
+                                $.get("/api/scrape").then(function (data) {
+                                    // If we are able to succesfully scrape the NYTIMES and compare the articles to those
+                                    // already in our collection, re render the articles on the page
+                                    // and let the user know how many unique articles we were able to save
+                                    initPage();
+                                    bootbox.alert("<h3 class='text-center m-top-80'>" + data.message + "<h3>");
+                                });
+                            }
+                        });
+
+
+
+                    </script>
 
 
 
 
-
-</body>
+    </body>
 
 </html>
