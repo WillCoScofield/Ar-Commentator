@@ -26,8 +26,10 @@ app.use(express.static("public"));
 
 
 //I'm assuming this is just a connection to my localfile in order to connect to the database?
-mongoose.connect('mongodb://localhost/myscrape');
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/myscrape";
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 
 
@@ -72,7 +74,7 @@ app.get("/api/articles", function (req, res) {
 });
 
 app.get("/api/comments", function (req, res) {
-    
+
     db.Comment.create(data)
         .then(function (dbComment) {
             // If we were able to successfully find Articles, send them back to the client
