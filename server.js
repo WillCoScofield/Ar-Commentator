@@ -36,13 +36,10 @@ app.get("/api/scrape", function (req, res) {
 
         var $ = cheerio.load(response.data);
 
-
-
-
         $("article.item").each(function (i, element) {
             var data = {};
 
-            data.imageURL= $(this).find("img").attr("src");
+            data.imageURL = $(this).find("img").attr("src");
             data.title = $(this).find("h2.title").text();
             data.summ = $(this).find("p.teaser").text();
             data.url = $(this).find("a").attr("href");
@@ -59,12 +56,27 @@ app.get("/api/scrape", function (req, res) {
     });
 });
 
+
+
 app.get("/api/articles", function (req, res) {
     // Grab every document in the Articles collection
     db.Article.find({})
         .then(function (dbArticle) {
             // If we were able to successfully find Articles, send them back to the client
             res.json(dbArticle);
+        })
+        .catch(function (err) {
+            // If an error occurred, send it to the client
+            res.json(err);
+        });
+});
+
+app.get("/api/comments", function (req, res) {
+    
+    db.Comment.create(data)
+        .then(function (dbComment) {
+            // If we were able to successfully find Articles, send them back to the client
+            res.json(dbComment);
         })
         .catch(function (err) {
             // If an error occurred, send it to the client
@@ -107,6 +119,10 @@ app.post("/articles/:id", function (req, res) {
             res.json(err);
         });
 });
+
+
+
+
 
 
 
